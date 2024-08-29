@@ -1,12 +1,17 @@
+@charset "utf-8";
+
 * {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: auto;
     box-sizing: border-box;
 }
 
-.body-contents {
+/*스크롤바 적용*/
+::-webkit-scrollbar {width: 12px; height: 12px;}
+::-webkit-scrollbar-thumb { background-color: #bbb; background-clip: padding-box; border: 2px solid transparent; border-radius: 10px;}
+
+.bodywrap {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
@@ -15,33 +20,69 @@
 header {
     height: 100px;
     width: 100%; 
-    background-color:yellowgreen; 
+    min-width: 1920px;
+    background-color:white; 
     z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
 
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 5px;
+
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 
-header .logo {
-    width: 250px;
-    background-color: bisque;
+header .logo h1{
+    font-size: 3rem; 
+    line-height: 50px;
+    margin-top: 12px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(1, 159, 207);
 }
 
 header .navigation {
     width: 100%;
-    background-color: aquamarine;
+    position: relative;
+
+    ul {
+        display: flex;
+        list-style: none;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    ul li {
+        height: 100%;
+        padding-top: .2em;
+        
+    }
+
+    ul li a {
+        font-size: 2rem;
+        text-decoration: none;
+          color: gray;
+          &:hover {
+            color: orange;
+          }
+    }
 }
+
 
 main {
     margin-top: 100px;
-    height: 200vh;
+    height: 400vh;
     background-color: white;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+main section {
+    scroll-margin-top: 100px;
 }
 
 main .intro {
@@ -51,6 +92,7 @@ main .intro {
 }
 
 main .about {
+    
     background-color: burlywood;
     padding: 10px;
     display: grid;
