@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/TextPlugin.min.js'></script>
+
     <link rel="stylesheet" href="./assets/css/font.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
+    <script defer src="./assets/js/intro-text-animation.js"></script>
     <title>Sudapapa's portfolio</title>
 </head>
 <body> <div class="bodywrap">
@@ -23,19 +29,16 @@
     </header>
     <main>
         <section id="intro-section"  class="intro">
-            인트로 섹션
             <div class="intro__bg-video">
-
-            </div>
-            <div class="intro__bg-color">
-
+                <div class="intro__bg-video__overlay"></div>
+                <video type="video/mp4" src="./assets/videos/background.mp4" autoplay loop muted></video>
             </div>
             <div class="intro__bg-anitext">
                 <span class="intro__anitext1"></span>
                 <span class="intro__anitext2"></span>
             </div>
-            <div clas="intro__btn-scroll">
-
+            <div class="intro__btn-scroll"> 
+                <a href="#about-section"><span></span>Scroll</a>
             </div>
         </section>
         <section id="about-section" class="about">
