@@ -79,7 +79,7 @@ main {
     min-height: 100vh;
     background-color: white;
     display: grid;
-    grid-template-rows: 95vh 92vh auto auto;
+    grid-template-rows: 95vh 92vh 92vh auto;
 }
 
 main section {
@@ -88,6 +88,7 @@ main section {
 
 main .intro {
     position: relative;
+    overflow: hidden;
 }
 
 main .intro__bg-video {
@@ -286,15 +287,59 @@ main .skills {
 }
 
 footer {
-    height: 250px;
-    background-color: cyan;
+    height: 300px;
     padding: 10px;
-
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 1fr 1fr;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 footer .business-card {
-    background-color: azure;
+    height: max-content;
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: auto auto 3.5fr;
 }
+
+footer .business-card__image {
+    grid-column: 1/2;
+    height: 280px;
+    width: 250px;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+footer .business-card__seperator {
+    grid-column: 2/3;
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+footer .business-card__contact {
+    grid-column: 3/4;
+    max-height: 280px;
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 4rem;
+        color: cyan;
+    }
+    h2 {
+        color: white;
+        margin-bottom: 10px;
+    }
+    h3 {
+        color: #999999;
+    }
+}
+
 
