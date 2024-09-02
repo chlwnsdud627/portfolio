@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
 
 * {
     padding: 0;
@@ -12,7 +13,6 @@
 
 .bodywrap {
     display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
 }
 
@@ -79,7 +79,7 @@ main {
     min-height: 100vh;
     background-color: white;
     display: grid;
-    grid-template-rows: 95vh 92vh 92vh auto;
+    grid-template-rows: 95vh 92vh 92vh 92vh;
 }
 
 main section {
@@ -245,20 +245,27 @@ main .about__introduce {
     grid-row: 2/3;
     grid-column: 1/2;
     display: flex;
+    align-self: center;
     align-items: center;
     flex-direction: column;
     padding: 50px;
-    padding-top: 200px;
+    
     h2 {
-        background-color: #3eca5f;
-        font-size: 5em;
-        color: red;
+        font-family: NanumSquareRound, sans-serif;
+        font-weight: 700;
+        font-size: 3rem;
+        color: black;
+        line-height: 150%;
     }
 
     h3 {
-        margin-top: 5vh;
-        font-size: 4em;
-        color: Blue;
+        text-align: center;
+        font-family: NanumSquareRound, sans-serif;
+        font-weight: 300;
+        margin-top: 3vh;
+        font-size: 2rem;
+        line-height: 150%;
+        color: rgb(36, 36, 36);
         vertical-align: middle;
     }
 }
@@ -283,7 +290,25 @@ main .projects {
 
 main .skills {
     padding: 10px;
-    background-color:coral;
+    height: 250px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #999999;
+}
+
+main .skills__title {
+    margin-top: 25px;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    h3 {
+        margin-bottom: 10px;
+        font-size: 4rem;
+    }
+
+    h4 {
+
+    }
 }
 
 footer {

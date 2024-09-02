@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script defer src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
     <script defer src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/TextPlugin.min.js'></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
 
     <link rel="stylesheet" href="./assets/css/font.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
@@ -49,8 +53,18 @@
                 <img src="./assets/images/AboutMe_Profile2.jpg" alt="profile_image">
             </div>
             <div class="about__introduce">
-                <h2>이것은 내 소개를 강조하는 부분입니다.</h2>
-                <h3>이건 뭔가 작은거..</h3>
+                <h2 data-aos="fade-up">
+                    Window&Web 에서 활약중인 13년차 개발자 최준영입니다.
+                    <p>함께 하는 모두를 성장시키고, 어떤 일이든 반드시 해내겠습니다.</p>
+                </h2>
+                <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100" data-aos-delay="50">
+                    저는 ‘성장을 멈추면 개발도 멈춘다’ 라는 마인드로 꾸준히 성장하고 있는 개발자입니다. 
+                    현재 업무와 연관되어서는 깊게 파고들며, 업무가 전향되었을 때에도 준비된 개발자로 
+                    실무에 활용될 수 있도록 항상 변화하는 기술에 관심을 두고 익혀 나가고 있습니다. 
+                    제가 알고 있는 것들을 적극 공유하며 같이 일하는 동료와 함께 성장할 것입니다. 
+                    지금껏 그래왔듯이 함께 일하는 모두에게 ‘일잘러’로서 인정받고 같이 일하는 동료를 이끌어 함께 성장하도록 하겠습니다.
+
+                </h3>
             </div>
         </section>
         <section id="project-section" class="projects">
@@ -63,7 +77,8 @@
         </section>
         <section id="skill-section" class="skills">
             <div class="skills__title">
-
+                <h3 data-aos="fade-up" >보유 기술</h3>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100" data-aos-delay="50">Deep & Wide Skills </p>
             </div>
             <div class="skills_contents">
 
@@ -85,6 +100,9 @@
             </div>
         </div>
     </footer>
-</div></body>
+</div>
+<script>
+    AOS.init();
+</script></body>
 </html>
 
